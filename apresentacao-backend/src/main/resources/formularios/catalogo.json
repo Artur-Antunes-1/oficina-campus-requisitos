@@ -1,0 +1,285 @@
+[
+  {
+    "id": "oficinas",
+    "title": "Oficinas",
+    "singular": "oficina",
+    "owner": 1,
+    "group": "Catálogo",
+    "summary": "Ideias de aprendizagem, reunidas em um só lugar.",
+    "fields": [
+      {
+        "key": "titulo",
+        "label": "Título",
+        "kind": "text",
+        "min": 1,
+        "max": 100,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "apresentacao",
+        "label": "Apresentação",
+        "kind": "textarea",
+        "min": 1,
+        "max": 2000,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "modalidade",
+        "label": "Modalidade",
+        "kind": "select",
+        "min": 1,
+        "max": 100,
+        "required": true,
+        "options": [
+          "Presencial",
+          "Online",
+          "Híbrida"
+        ],
+        "hint": ""
+      },
+      {
+        "key": "duracao",
+        "label": "Duração em minutos",
+        "kind": "number",
+        "min": 1,
+        "max": 480,
+        "required": true,
+        "options": [],
+        "hint": ""
+      }
+    ],
+    "seeds": [
+      {
+        "titulo": "Introdução à programação criativa",
+        "apresentacao": "Explore lógica e criatividade construindo pequenas experiências interativas.",
+        "modalidade": "Presencial",
+        "duracao": 120
+      },
+      {
+        "titulo": "Dados que contam histórias",
+        "apresentacao": "Transforme números em visualizações e descubra como comunicar descobertas.",
+        "modalidade": "Online",
+        "duracao": 90
+      },
+      {
+        "titulo": "Design para o cotidiano",
+        "apresentacao": "Observe desafios reais e crie soluções simples com ferramentas de design.",
+        "modalidade": "Híbrida",
+        "duracao": 180
+      }
+    ],
+    "story": "Como organizadora, quero manter fichas de oficinas para apresentar propostas de aprendizagem com informações claras.",
+    "activity": "Preparar a base",
+    "policy": "padrao"
+  },
+  {
+    "id": "interesses",
+    "title": "Manifestações de interesse",
+    "singular": "manifestação de interesse",
+    "owner": 1,
+    "group": "Catálogo",
+    "summary": "Ouça os temas e formatos que a comunidade procura.",
+    "fields": [
+      {
+        "key": "nome",
+        "label": "Nome declarado",
+        "kind": "text",
+        "min": 1,
+        "max": 100,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "email",
+        "label": "E-mail",
+        "kind": "email",
+        "min": 1,
+        "max": 254,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "tema",
+        "label": "Tema desejado",
+        "kind": "text",
+        "min": 1,
+        "max": 150,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "modalidade",
+        "label": "Preferência de modalidade",
+        "kind": "select",
+        "min": 1,
+        "max": 100,
+        "required": true,
+        "options": [
+          "Presencial",
+          "Online",
+          "Híbrida",
+          "Sem preferência"
+        ],
+        "hint": ""
+      }
+    ],
+    "seeds": [
+      {
+        "nome": "Ana Lima",
+        "email": "ana@example.com",
+        "tema": "Python para iniciantes",
+        "modalidade": "Online"
+      },
+      {
+        "nome": "Gabriel Costa",
+        "email": "gabriel@example.com",
+        "tema": "Fotografia e narrativa",
+        "modalidade": "Sem preferência"
+      }
+    ],
+    "story": "Como organizadora, quero registrar interesses declarados para conhecer temas e formatos desejados, sem efetuar inscrições.",
+    "activity": "Ouvir a comunidade",
+    "policy": "padrao"
+  },
+  {
+    "id": "instrutores",
+    "title": "Instrutores",
+    "singular": "instrutor",
+    "owner": 1,
+    "group": "Catálogo",
+    "summary": "Conheça quem compartilha conhecimento.",
+    "fields": [
+      {
+        "key": "nome",
+        "label": "Nome",
+        "kind": "text",
+        "min": 1,
+        "max": 100,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "apresentacao",
+        "label": "Apresentação",
+        "kind": "textarea",
+        "min": 1,
+        "max": 2000,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "especialidade",
+        "label": "Especialidade",
+        "kind": "text",
+        "min": 1,
+        "max": 150,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "contato",
+        "label": "Contato profissional",
+        "kind": "text",
+        "min": 0,
+        "max": 254,
+        "required": false,
+        "options": [],
+        "hint": ""
+      }
+    ],
+    "seeds": [
+      {
+        "nome": "Marina Alves",
+        "apresentacao": "Educadora com experiência em oficinas práticas de tecnologia.",
+        "especialidade": "Programação criativa",
+        "contato": "marina@example.com"
+      },
+      {
+        "nome": "Bruno Melo",
+        "apresentacao": "Designer dedicado a tornar conceitos complexos mais acessíveis.",
+        "especialidade": "Design de informação",
+        "contato": "bruno@example.com"
+      }
+    ],
+    "story": "Como organizadora, quero manter perfis informativos de instrutores para consultar suas especialidades e contatos.",
+    "activity": "Preparar a base",
+    "policy": "padrao"
+  },
+  {
+    "id": "espacos",
+    "title": "Espaços",
+    "singular": "espaço",
+    "owner": 1,
+    "group": "Catálogo",
+    "summary": "Um panorama dos ambientes disponíveis.",
+    "fields": [
+      {
+        "key": "nome",
+        "label": "Nome",
+        "kind": "text",
+        "min": 1,
+        "max": 100,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "localizacao",
+        "label": "Localização",
+        "kind": "text",
+        "min": 1,
+        "max": 200,
+        "required": true,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "descricao",
+        "label": "Descrição",
+        "kind": "textarea",
+        "min": 0,
+        "max": 2000,
+        "required": false,
+        "options": [],
+        "hint": ""
+      },
+      {
+        "key": "capacidade",
+        "label": "Capacidade informativa",
+        "kind": "number",
+        "min": 1,
+        "max": 1000,
+        "required": false,
+        "options": [],
+        "hint": "Pode ficar vazia. Não representa reserva nem controle de vagas."
+      }
+    ],
+    "seeds": [
+      {
+        "nome": "Laboratório Criativo",
+        "localizacao": "Bloco A · sala 204",
+        "descricao": "Mesas modulares e pontos de energia.",
+        "capacidade": 30
+      },
+      {
+        "nome": "Sala Horizonte",
+        "localizacao": "Bloco B · térreo",
+        "descricao": "Ambiente para encontros e atividades em grupo.",
+        "capacidade": null
+      }
+    ],
+    "story": "Como organizadora, quero manter fichas de espaços para consultar localização e capacidade informativa.",
+    "activity": "Preparar a base",
+    "policy": "padrao"
+  }
+]

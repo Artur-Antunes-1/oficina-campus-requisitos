@@ -1,0 +1,87 @@
+Domain OficinaCampus {
+  Subdomain Catalogo
+}
+
+ContextMap {
+  contains Catalogo
+}
+
+// Contexto Catalogo: metadados de Controle achatados para leitura conceitual.
+BoundedContext Catalogo {
+  Aggregate Oficina {
+    Entity Oficina {
+      aggregateRoot
+      String id
+      String titulo
+      String apresentacao
+      String modalidade
+      Integer duracao
+      String estado
+      long versao
+      Date criadoEm
+      Date atualizadoEm
+      Repository OficinaRepository {
+        @Oficina obter(String id);
+        List<@Oficina> listar();
+        void salvar(@Oficina agregado);
+      }
+    }
+  }
+  Aggregate ManifestacaoInteresse {
+    Entity ManifestacaoInteresse {
+      aggregateRoot
+      String id
+      String nome
+      String ^email
+      String tema
+      String modalidade
+      String estado
+      long versao
+      Date criadoEm
+      Date atualizadoEm
+      Repository ManifestacaoInteresseRepository {
+        @ManifestacaoInteresse obter(String id);
+        List<@ManifestacaoInteresse> listar();
+        void salvar(@ManifestacaoInteresse agregado);
+      }
+    }
+  }
+  Aggregate Instrutor {
+    Entity Instrutor {
+      aggregateRoot
+      String id
+      String nome
+      String apresentacao
+      String especialidade
+      String contato nullable
+      String estado
+      long versao
+      Date criadoEm
+      Date atualizadoEm
+      Repository InstrutorRepository {
+        @Instrutor obter(String id);
+        List<@Instrutor> listar();
+        void salvar(@Instrutor agregado);
+      }
+    }
+  }
+  Aggregate Espaco {
+    Entity Espaco {
+      aggregateRoot
+      String id
+      String nome
+      String localizacao
+      String descricao nullable
+      Integer capacidade nullable
+      String estado
+      long versao
+      Date criadoEm
+      Date atualizadoEm
+      Repository EspacoRepository {
+        @Espaco obter(String id);
+        List<@Espaco> listar();
+        void salvar(@Espaco agregado);
+      }
+    }
+  }
+}

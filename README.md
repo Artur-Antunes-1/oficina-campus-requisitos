@@ -3,10 +3,28 @@
 Projeto de Requisitos de Software e FCCPD.
 
 Equipe: Artur Antunes, Ricardo, Luca, Victor e João Cláudio.
+Partes integradas nesta etapa: Catálogo (4 funcionalidades).
 
-Estrutura Maven baseada no exemplo do professor: https://github.com/profsauloaraujo/sgb-2025-01
+## Executar
 
-Esta etapa contém o pai Maven e as classes de domínio compartilhadas.
-Para compilar e testar: `mvn verify` com JDK 17+ e Maven 3.6.3+.
+Com JDK 17+ e Maven 3.6.3+, na raiz:
 
-O grupo trabalha na branch `main`.
+```sh
+mvn verify
+java -jar apresentacao-backend/target/oficina-campus.jar
+```
+
+Abra http://127.0.0.1:8080. O banco H2 fica em `dados/`.
+`prototipo.html` contém a demonstração com dados fictícios no navegador.
+
+## Material
+
+- [Domínio](docs/dominio.md)
+- [Requisitos](docs/requisitos.md)
+- [API](docs/api.md)
+- [Modelo CML](oficina-campus.cml)
+- [Desenvolvimento e apoio de IA](docs/interacoes/desenvolvimento.md)
+
+A estrutura segue https://github.com/profsauloaraujo/sgb-2025-01.
+O grupo trabalha na branch `main`. Atualize com `git pull --ff-only` antes de
+iniciar uma alteração e teste a parte antes de enviar.
